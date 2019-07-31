@@ -1,0 +1,15 @@
+<div style="margin-bottom: 50px; padding-top: 20px">
+    <h1>My Task List</h1> 
+</div>
+
+<% @tasks.each do |task| %>
+
+<h3><i class= "fa fa-lg fa-check"> </i>
+<%= link_to task.title, task %></h3> 
+
+<%= link_to "Delete", task_path(task), method: :delete %><i class= "fa fa-lg fa-trash"> </i>
+<%= link_to "Edit", edit_task_path(task)%><br><hr>
+<% end %>
+
+
+<%= link_to "Add a task", tasks_new_path %>

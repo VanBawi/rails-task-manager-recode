@@ -1,0 +1,20 @@
+
+<h1> Add Task </h1>
+
+<%= form_for :task, url: tasks_path do |f| %>
+<p style="">
+  <%= f.label :title %> 
+  <%= f.text_field :title %><br>
+</p>
+
+<p>
+  <%= f.label :details %>
+  <%= f.text_area :details %><br>
+</p>
+
+<p>
+  <%= f.submit({:class => 'btn btn-primary'})%>
+  </p>
+<% end %>
+
+ <%# ({class => 'btn btn-primary'}) %>
